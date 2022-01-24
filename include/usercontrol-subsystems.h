@@ -3,6 +3,7 @@
 void arcadeControl(motorPair* chassisLeft, motorPair* chassisRight, controller* control);
 
 void liftManualControl(motorPair* lift, controller::button* upButton, controller::button* downButton);
+void liftLatchControl(digital_out* pnum, controller::button* toggle);
 
 void intakeManualControl(motor* intake, controller::button* forwardButton, controller::button* reverseButton);
 void intakeToggleControl(motor* intake, controller::button* toggleButton, controller::button* reverseButton);

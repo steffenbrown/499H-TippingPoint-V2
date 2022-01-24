@@ -23,8 +23,8 @@ motor elevator = motor(PORT7, gearSetting::ratio18_1, false);
 
 motor picklift = motor(PORT8, gearSetting::ratio6_1);
 
-pneumatics pickliftLatch = pneumatics(Brain.ThreeWirePort.A);
-pneumatics pickLatch = pneumatics(Brain.ThreeWirePort.B);
+digital_out pickliftLatch = digital_out(Brain.ThreeWirePort.A);
+digital_out liftLatch = digital_out(Brain.ThreeWirePort.B);
 
 void pre_auton(void) {
   

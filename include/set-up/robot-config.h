@@ -21,7 +21,7 @@ extern motor elevator;
 
 extern motor picklift;
 
-extern pneumatics pickliftLatch;
-extern pneumatics pickLatch;
+extern digital_out pickliftLatch;
+extern digital_out liftLatch;
 
 void pre_auton(void);

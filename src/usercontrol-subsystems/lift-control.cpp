@@ -59,3 +59,22 @@ void liftManualControl(motorPair* lift, controller::button* upButton, controller
     }
   }
 }
+
+///////////////////////////////////////////////////////////////////////////
+
+bool pnumaticActive = false;
+digital_out* latchPnumatic;
+
+void toggleLatchPnumatic() {
+  if(!pnumaticActive) {
+    latchPnumatic->set(true);
+    pnumaticActive = true;
+  } else {
+    latchPnumatic->set(false);
+    pnumaticActive = false;
+  }
+}
+
+void liftLatchControl(digital_out* pnum, controller::button* toggle) {
+  latchPnumatic = pnum;
+}
